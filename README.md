@@ -1,2 +1,0 @@
-# next-project
-hello
