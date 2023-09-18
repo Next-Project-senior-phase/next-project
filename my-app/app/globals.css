@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  
+  color: black;
+  background-color: white;
+}
+
+[data-theme="dark"] body{
+  color: beige;
+  background-color: black;
 }

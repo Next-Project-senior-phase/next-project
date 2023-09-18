@@ -4,11 +4,11 @@ export default function Stats() {
       <div className="mb-10 mt-10 w-100 h-56 justify-start items-start gap-7 inline-flex">
         {/* 1 */}
         <div className="group w-[300px] h-[300px]">
-          <div className="px-12 py-7 rounded border border-black border-opacity-30 justify-center items-center flex group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
+          <div className="px-12 py-7 rounded border dark:border-white border-black border-opacity-30 justify-center items-center flex dark:group-hover:bg-teal-500 group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
             <div className="flex-col justify-start items-center gap-6 inline-flex">
               <div className="w-20 h-20 relative">
                 <div className="w-20 h-20 left-0 top-0 absolute">
-                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
+                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full dark:bg-gray-400 group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
                   <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-white transition ease-in-out delay-150 duration-500" />
                 </div>
                 <div className="w-10 h-10 px-1 py-1 left-[20px] top-[20px] absolute justify-center items-center inline-flex">
@@ -55,10 +55,10 @@ export default function Stats() {
                 </div>
               </div>
               <div className="flex-col justify-start items-center gap-3 flex">
-                <p className="text-black text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-black dark:text-white text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
                   10.5k
                 </p>
-                <p className="text-center text-black text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-center text-black dark:text-white text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
                   Brands and Items
                 </p>
               </div>
@@ -68,11 +68,11 @@ export default function Stats() {
         {/* 1 */}
         {/* 2 */}
         <div className="group w-[300px] h-[300px]">
-          <div className="px-12 py-7 rounded border border-black border-opacity-30 justify-center items-center flex group-hover:bg-red-500 group-hover:drop-shadow-xl">
+          <div className="px-12 py-7 rounded border border-black dark:border-white border-opacity-30 justify-center items-center flex dark:group-hover:bg-teal-500 group-hover:bg-red-500 group-hover:drop-shadow-xl">
             <div className="flex-col justify-start items-center gap-6 inline-flex">
               <div className="w-20 h-20 relative">
                 <div className="w-20 h-20 left-0 top-0 absolute">
-                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full group-hover:bg-gray-400" />
+                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full dark:bg-gray-400 group-hover:bg-gray-400" />
                   <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-white" />
                 </div>
                 <div className="w-10 h-10 px-1 py-1 left-[20px] top-[20px] absolute justify-center items-center inline-flex">
@@ -109,10 +109,10 @@ export default function Stats() {
                 </div>
               </div>
               <div className="flex-col justify-start items-center gap-3 flex">
-                <p className="text-black text-3xl font-bold leading-loose tracking-wider group-hover:invert">
+                <p className="text-black dark:text-white text-3xl font-bold leading-loose tracking-wider group-hover:invert">
                   30k
                 </p>
-                <p className="text-center text-black text-base font-normal leading-normal group-hover:invert">
+                <p className="text-center text-black dark:text-white text-base font-normal leading-normal group-hover:invert">
                   Mounthly sales
                 </p>
               </div>
@@ -122,11 +122,11 @@ export default function Stats() {
         {/* 2 */}
         {/* 3 */}
         <div className="group w-[300px] h-[300px]">
-          <div className="px-10 py-7 rounded border border-black border-opacity-30 justify-center items-center flex group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
+          <div className="px-10 py-7 rounded border border-black dark:border-white border-opacity-30 justify-center items-center flex dark:group-hover:bg-teal-500 group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
             <div className="flex-col justify-start items-center gap-6 inline-flex">
               <div className="w-20 h-20 relative">
                 <div className="w-20 h-20 left-0 top-0 absolute">
-                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
+                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full dark:bg-gray-400 group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
                   <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-white transition ease-in-out delay-150 duration-500" />
                 </div>
                 <div className="w-10 h-10 px-1 py-1 left-[20px] top-[20px] absolute justify-center items-center inline-flex">
@@ -146,10 +146,10 @@ export default function Stats() {
                 </div>
               </div>
               <div className="flex-col justify-start items-center gap-3 flex">
-                <p className="text-black text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-black dark:text-white text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
                   45k
                 </p>
-                <p className="text-center text-black text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-center text-black dark:text-white text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
                   Active customers in our site
                 </p>
               </div>
@@ -159,11 +159,11 @@ export default function Stats() {
         {/* 3 */}
         {/* 4 */}
         <div className="group w-[300px] h-[300px]">
-          <div className="px-10 py-7 rounded border border-black border-opacity-30 justify-center items-center flex group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
+          <div className="px-10 py-7 rounded border border-black dark:border-white border-opacity-30 justify-center items-center flex dark:group-hover:bg-teal-500 group-hover:bg-red-500 group-hover:drop-shadow-xl transition ease-in-out delay-150 duration-500">
             <div className="flex-col justify-start items-center gap-6 inline-flex">
               <div className="w-20 h-20 relative">
                 <div className="w-20 h-20 left-0 top-0 absolute">
-                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
+                  <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full dark:bg-gray-400 group-hover:bg-gray-400 transition ease-in-out delay-150 duration-500" />
                   <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-white transition ease-in-out delay-150 duration-500" />
                 </div>
                 <div className="w-10 h-10 px-1 py-1 left-[20px] top-[20px] absolute justify-center items-center inline-flex">
@@ -189,10 +189,10 @@ export default function Stats() {
                 </div>
               </div>
               <div className="flex-col justify-start items-center gap-3 flex">
-                <p className="text-black text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-black dark:text-white text-3xl font-bold leading-loose tracking-wider group-hover:invert transition ease-in-out delay-150 duration-500">
                   25k
                 </p>
-                <p className="text-center text-black text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
+                <p className="text-center text-black dark:text-white text-base font-normal leading-normal group-hover:invert transition ease-in-out delay-150 duration-500">
                   Annual gross sale in our site
                 </p>
               </div>

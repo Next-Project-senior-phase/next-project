@@ -12,7 +12,7 @@ export default function LargeImage() {
         Get Your Unique Perfume
       </div>
       <Link href="/AllProducts">
-        <div className="px-12 py-4 left-[56px] top-[165px] absolute bg-red-500 rounded justify-center items-center gap-2.5 inline-flex text-white">
+        <div className="px-12 py-4 left-[56px] top-[165px] absolute dark:bg-teal-500 bg-red-500 rounded justify-center items-center gap-2.5 inline-flex text-white">
             Buy Now!
         </div>
       </Link>

@@ -19,7 +19,7 @@ function MyTimer({ expiryTimestamp }) {
   });
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col dark:text-neutral-50">
         <div className="inline-flex text-2xsm gap-5 font-semibold">
           <p>Days</p>
           <p>Hours</p>

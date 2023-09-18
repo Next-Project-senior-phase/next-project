@@ -46,18 +46,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pl-5 pr-5 gap-5">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-10 pb-10 pl-5 pr-5 gap-5 dark:bg-neutral-900">
       <div className="flex">
         <Sidebar />
         <HPCarousel />
       </div>
       <FlashSales data={products} />
       <ViewAllProdButton />
-      <hr className="w-[1170px] mt-12 opacity-30 border-t border-black pb-10" />
+      <hr className="w-[1170px] mt-12 opacity-30 border-t dark:border-white border-black pb-10" />
       <Categories />
-      <hr className="w-[1170px] opacity-30 border-t border-black pb-10" />
+      <hr className="w-[1170px] opacity-30 border-t dark:border-white border-black pb-10" />
       <ThisMonth />
-      <hr className="w-[1170px] opacity-30 border-t border-black pb-10 mt-10" />
+      <hr className="w-[1170px] opacity-30 border-t dark:border-white border-black pb-10 mt-10" />
       <OurProducts data={products} />
       <NewArrival />
       <Services />

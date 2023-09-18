@@ -8,11 +8,8 @@ function SignUp() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
-
     lastName: "", 
-
     lastName: "",
-
     email: "",
     password: "",
     passwordConfirm: "",
@@ -52,21 +49,19 @@ function SignUp() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+    <main className="flex min-h-screen flex-col items-center justify-between p-5 dark:bg-neutral-900">
       <div className="flex gap-6 mx-auto my-10 max-w-screen-lg">
-        {/* <div className="flex flex-col items-stretch w-1/2 gap-6 p-10 "> */}
         <img
           className="object-cover items-stretch w-1/2 rounded-l-md"
           src="https://row.byterry.com/imager/variantimage/1396726/CrayonBlackstarMultiProduct_2022_Still-Life-1_c9fedec9053052e200634301edbc185a.jpg"
           alt="Cosmetics"
         />
-        {/* </div> */}
-        <div className="flex flex-col w-1/2 gap-6 p-10 bg-white rounded shadow-lg">
+        <div className="flex flex-col w-1/2 gap-6 p-10 dark:bg-black bg-white rounded shadow-lg">
           <div className="flex flex-col gap-6">
-            <div className="text-black text-4xl font-medium leading-loose tracking-wider">
+            <div className="text-black dark:text-white text-4xl font-medium leading-loose tracking-wider">
               Create an account
             </div>
-            <div className="text-black text-base font-normal leading-normal">
+            <div className="text-black dark:text-white text-base font-normal leading-normal">
               Enter your details below
             </div>
           </div>
@@ -85,7 +80,7 @@ function SignUp() {
               ].map((field) => (
                 <div className="flex flex-col gap-2" key={field.label}>
                   <label
-                    className="opacity-40 text-black text-base font-normal leading-normal"
+                    className="opacity-40 text-black dark:text-white text-base font-normal leading-normal"
                     htmlFor={field.name}
                   >
                     {field.label}
@@ -94,7 +89,7 @@ function SignUp() {
                     id={field.name}
                     name={field.name}
                     type={field.type}
-                    className="w-full border-b border-black opacity-50 py-2"
+                    className="w-full border-b border-black dark:border-white dark:text-white dark:bg-black opacity-80 py-2"
                     onChange={handleChange}
                     required
                   />
@@ -104,22 +99,22 @@ function SignUp() {
             <div className="flex flex-col items-start gap-6 mt-6">
               <button
                 type="submit"
-                className="w-full h-14 px-32 py-4 bg-red-500 rounded text-neutral-50 text-base font-medium"
+                className="w-full h-14 px-32 py-4 dark:bg-teal-500 bg-red-500 rounded text-neutral-50 text-base font-medium"
               >
                 Create Account
               </button>
               <div className="flex flex-col gap-6 items-start">
-                <button className="w-[408px] h-14  py-4 border border-black border-opacity-40 rounded flex items-center gap-4 justify-center">
+                <button className="w-[408px] h-14  py-4 border dark:border-white dark:text-white border-black border-opacity-40 rounded flex items-center gap-4 justify-center">
                   <img className="w-6 h-6"
                   src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png"/>
                   Sign up with Google
                 </button>
                 <div className="inline-flex items-start gap-2">
-                  <div className="opacity-70 text-black text-base font-normal">
+                  <div className="opacity-70 text-black dark:text-white text-base font-normal">
                     Already have an account?
                   </div>
                   <Link legacyBehavior href="/SignIn">
-                    <a className="opacity-70 text-black text-base font-medium underline">
+                    <a className="opacity-70 text-black dark:text-white text-base font-medium underline">
                       Log in
                     </a>
                   </Link>

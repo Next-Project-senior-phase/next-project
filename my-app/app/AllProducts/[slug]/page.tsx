@@ -58,7 +58,7 @@ export default async function ProductDetail({
   const filterdd = await filtered(query)
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-20">
+    <main className="flex min-h-screen flex-col items-center justify-between py-20 px-20 dark:bg-neutral-900">
       <div className="inline-grid grid-cols-4 gap-6">
         {
        

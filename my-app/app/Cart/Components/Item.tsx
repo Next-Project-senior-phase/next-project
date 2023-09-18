@@ -1,6 +1,6 @@
 export default function Item() {
   return (
-    <div className="w-[1170px] h-24 relative bg-white rounded shadow">
+    <div className="w-[1170px] h-24 relative dark:bg-black bg-white rounded shadow">
       {/* PRODUCT */}
       <div className="group">
         <img
@@ -27,23 +27,23 @@ export default function Item() {
       </div>
       {/* PRODUCT */}
       {/* PRODUCT-NAME */}
-      <p className="left-[114px] top-[39px] absolute text-black text-base font-normal leading-normal">
-        DIOR Shit
+      <p className="left-[114px] top-[39px] absolute dark:text-white text-black text-base font-normal leading-normal">
+        DIOR Swag
       </p>
       {/* PRODUCT-NAME */}
       {/* PRICE */}
-      <p className="left-[387px] top-[39px] absolute text-black text-base font-normal leading-normal">
+      <p className="left-[387px] top-[39px] absolute dark:text-white text-black text-base font-normal leading-normal">
         $650
       </p>
       {/* PRICE */}
       {/* QUANTITY */}
       <input
         type="number"
-        className="w-16 h-11 px-3 py-1.5 left-[710px] top-[29px] absolute rounded border border-black border-opacity-40 justify-center items-center inline-flex"
+        className="w-16 h-11 px-3 py-1.5 left-[710px] top-[29px] absolute rounded border dark:text-white dark:border-white border-black border-opacity-40 justify-center items-center inline-flex"
       />
       {/* QUANTITY */}
       {/* TOTAL */}
-      <p className="left-[1063px] top-[39px] absolute text-black text-base font-normal leading-normal">
+      <p className="left-[1063px] top-[39px] absolute dark:text-white text-black text-base font-normal leading-normal">
         $650
       </p>
       {/* TOTAL */}

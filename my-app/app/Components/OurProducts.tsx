@@ -37,8 +37,8 @@ export default function OurProducts(props: Props) {
     <div className="justify-center items-center flex flex-col">
       <div className="flex flex-col gap-5 ">
         <div className="items-center gap-4 flex">
-          <div className=" w-5 h-10 bg-red-500 rounded" />
-          <p className=" text-red-500 text-base font-semibold leading-tight pr-96">
+          <div className=" w-5 h-10 dark:bg-teal-500 bg-red-500 rounded" />
+          <p className=" text-red-500 dark:text-teal-500 text-base font-semibold leading-tight pr-96">
             Our Products
           </p>
           <div className="gap-2 flex relative pl-96">
@@ -100,7 +100,7 @@ export default function OurProducts(props: Props) {
             </button>
           </div>
         </div>
-        <p className="text-black text-2xl font-semibold tracking-wider">
+        <p className="text-black dark:text-white text-2xl font-semibold tracking-wider">
           Explore Our Products
         </p>
       </div>

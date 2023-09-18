@@ -140,13 +140,13 @@ export default function MainPanel() {
 
   return (
     <main>
-      <div className="w-[870px] h-[630px] relative bg-white rounded shadow">
-        <div className="left-[80px] top-[40px] relative text-red-500 text-xl font-medium leading-7">
+      <div className="w-[870px] h-[630px] relative dark:bg-black bg-white rounded shadow">
+        <div className="left-[80px] top-[40px] relative dark:text-teal-500 text-red-500 text-xl font-medium leading-7">
           Edit Your Profile
         </div>
         <form onSubmit={(e) => handleSubmit(e)}>
           <div className="left-[80px] top-[80px] absolute flex items-center rounded-full justify-center">
-            <label className="w-[685px] flex flex-col items-center justify-center border border-gray-300 border-dashed rounded-lg bg-gray-50 dark:hover:bg-bray-800">
+            <label className="w-[685px] flex flex-col items-center justify-center border border-gray-300 border-dashed rounded-lg dark:bg-black bg-gray-50 dark:hover:bg-bray-800">
               <div className="flex flex-col items-center justify-center w-full h-full">
                 <img
                   src={userData?.data.user.photo}
@@ -174,23 +174,23 @@ export default function MainPanel() {
           </div>
           <div className="left-[80px] top-[160px] absolute justify-start items-start gap-12 inline-flex">
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <p className="text-black text-base font-normal leading-normal">
+              <p className="text-black dark:text-white text-base font-normal leading-normal">
                 First Name
               </p>
               <input
                 placeholder="John"
-                className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
+                className="pl-4 w-80 h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <p className="text-black text-base font-normal leading-normal">
+              <p className="text-black dark:text-white text-base font-normal leading-normal">
                 Last Name
               </p>
               <input
                 placeholder="Doe"
-                className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
+                className="pl-4 w-80 h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -198,24 +198,24 @@ export default function MainPanel() {
           </div>
           <div className="left-[80px] top-[258px] absolute justify-start items-start gap-12 inline-flex">
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <p className="text-black text-base font-normal leading-normal">
+              <p className="text-black dark:text-white text-base font-normal leading-normal">
                 Email
               </p>
               <input
                 placeholder="john.doe@cloud.com"
                 type="email"
-                className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
+                className="pl-4 w-80 h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <p className="text-black text-base font-normal leading-normal">
+              <p className="text-black dark:text-white text-base font-normal leading-normal">
                 Address
               </p>
               <input
                 placeholder="10 Apple seed Street"
-                className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
+                className="pl-4 w-80 h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
               />
@@ -223,7 +223,7 @@ export default function MainPanel() {
           </div>
           <div className="left-[80px] top-[366px] absolute flex-col justify-start items-start gap-4 inline-flex">
             <div className="flex-col justify-start items-start gap-2 flex">
-              <p className="text-black text-base font-normal leading-normal">
+              <p className="text-black dark:text-white text-base font-normal leading-normal">
                 Password Changes
               </p>
               {/*  <input
@@ -237,14 +237,14 @@ export default function MainPanel() {
             <input
               placeholder="New Password"
               type="password"
-              className="pl-4 w-[690px] h-12 left-0 top-0 relative bg-neutral-100 rounded"
+              className="pl-4 w-[690px] h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <input
               placeholder="Confirm Password"
               type="password"
-              className="pl-4 w-[690px] h-12 left-0 top-0 relative bg-neutral-100 rounded"
+              className="pl-4 w-[690px] h-12 left-0 top-0 relative dark:bg-neutral-700 dark:text-white bg-neutral-100 rounded"
               value={confirmPassword}
               onChange={(e) => {
                 setConfirmPassword(e.target.value);
@@ -265,13 +265,13 @@ export default function MainPanel() {
           <div className="left-[487px] top-[544px] absolute justify-start items-center gap-8 inline-flex">
             <Link
               href="/"
-              className="text-black text-base font-normal leading-normal"
+              className="text-black dark:text-white text-base font-normal leading-normal"
             >
               Cancel
             </Link>
             <button
               type="submit"
-              className="px-12 py-4 bg-red-500 rounded justify-center items-center gap-2.5 flex text-neutral-50 text-base font-medium leading-normal hover:bg-red-600"
+              className="px-12 py-4 bg-red-500 dark:bg-teal-500 rounded justify-center items-center gap-2.5 flex text-neutral-50 text-base font-medium leading-normal hover:bg-red-600"
             >
               Save Changes
             </button>

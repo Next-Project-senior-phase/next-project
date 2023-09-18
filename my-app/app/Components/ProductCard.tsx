@@ -150,7 +150,7 @@ const ProductCard = (props: Props) => {
 
   return (
     <main>
-      <div className="group w-64 h-64 mb-1 relative bg-neutral-100 rounded border hover:scale-10 transition ease-in-out delay-150 duration-500">
+      <div className="group w-64 h-64 mb-1 relative bg-neutral-100 dark:bg-neutral-950 rounded border hover:scale-10 transition ease-in-out delay-150 duration-500">
         {/* RIGHT SIDE ICONS */}
         <div className="left-[218px] top-[8px] absolute flex-col justify-start items-start gap-2 inline-flex">
           {/* FAV */}
@@ -254,11 +254,11 @@ const ProductCard = (props: Props) => {
       
       </div>
       <div className="flex-col justify-start items-start gap flex">
-        <p className="text-black w-64 text-base font-medium leading-normal">
+        <p className="text-black dark:text-white w-64 text-base font-medium leading-normal">
           {data && data.name}
         </p>
         {/* PRICE */}
-        <p className="text-red-500 text-base font-medium leading-normal">
+        <p className="text-red-500 dark:text-teal-500 text-base font-medium leading-normal">
           ${data && data.price}
         </p>
         {/* PRICE & SALE */}

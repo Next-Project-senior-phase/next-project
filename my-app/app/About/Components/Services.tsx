@@ -1,12 +1,12 @@
 export default function Item() {
   return (
-    <div className="pt-40 w-screen h-40 justify-center items-center gap-20 inline-flex">
+    <div className="pt-40 pb-40 w-screen h-40 justify-center items-center gap-20 inline-flex">
       {/* 1 */}
       <div className="group">
         <div className="flex-col justify-start items-center gap-6 inline-flex">
           <div className="w-20 h-20 relative">
             <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full" />
-            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
+            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full dark:group-hover:bg-teal-500 group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
             <svg
               className="w-10 h-10 left-[18px] top-[18px] absolute"
               width="41"
@@ -79,10 +79,10 @@ export default function Item() {
             </svg>
           </div>
           <div className="flex-col justify-start items-center gap-2 flex">
-            <p className="text-black text-xl font-semibold leading-7">
+            <p className="text-black dark:text-white text-xl font-semibold leading-7">
               FREE AND FAST DELIVERY
             </p>
-            <p className="text-center text-black text-sm font-normal leading-tight">
+            <p className="text-center text-black dark:text-white text-sm font-normal leading-tight">
               Free delivery for all orders over $140
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function Item() {
         <div className="flex-col justify-start items-center gap-6 inline-flex">
           <div className="w-20 h-20 relative">
             <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full" />
-            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
+            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full dark:group-hover:bg-teal-500 group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
             <svg
               className="w-10 h-10 left-[18px] top-[18px] absolute"
               width="40"
@@ -140,10 +140,10 @@ export default function Item() {
             </svg>
           </div>
           <div className="flex-col justify-start items-center gap-2 flex">
-            <p className="text-black text-xl font-semibold leading-7">
+            <p className="text-black dark:text-white text-xl font-semibold leading-7">
               24/7 CUSTOMER SERVICE
             </p>
-            <p className="text-center text-black text-sm font-normal leading-tight">
+            <p className="text-center text-black dark:text-white text-sm font-normal leading-tight">
               Friendly 24/7 customer support
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function Item() {
         <div className="flex-col justify-start items-center gap-6 inline-flex">
           <div className="w-20 h-20 relative">
             <div className="w-20 h-20 left-0 top-0 absolute opacity-30 bg-zinc-800 rounded-full" />
-            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
+            <div className="w-14 h-14 left-[11px] top-[11px] absolute bg-black rounded-full dark:group-hover:bg-teal-500 group-hover:bg-red-500 transition ease-in-out delay-150 duration-500" />
             <svg
               className="w-10 h-10 left-[19px] top-[19px] absolute"
               width="40"
@@ -176,10 +176,10 @@ export default function Item() {
             </svg>
           </div>
           <div className="flex-col justify-start items-center gap-2 flex">
-            <p className="text-black text-xl font-semibold leading-7">
+            <p className="text-black dark:text-white text-xl font-semibold leading-7">
               FREE AND FAST DELIVERY
             </p>
-            <p className="text-center text-black text-sm font-normal leading-tight">
+            <p className="text-center text-black dark:text-white text-sm font-normal leading-tight">
               Free delivery for all orders over $140
             </p>
           </div>

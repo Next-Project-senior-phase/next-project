@@ -16,7 +16,6 @@ export default function UserDropDown() {
   const [toggle, setToggle] = useState(false);
   const [hide, setHide] = useState("");
   const [userData, setUserData] = useState<UserData | any>(null);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -60,7 +59,7 @@ export default function UserDropDown() {
     <main>
       <button
         onClick={() => setToggle(!toggle)}
-        className="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 "
+        className="flex items-center text-sm font-medium text-black dark:text-white rounded-full  md:mr-0 focus:ring dark:focus:ring-teal-500 focus:ring-red-500 "
         type="button"
       >
         <img
@@ -72,9 +71,9 @@ export default function UserDropDown() {
           }
           alt="user photo"
         />
-        <p className="text-black">{userData.data.user.name}</p>
+        <p className="text-black dark:text-white">{userData.data.user.name}</p>
         <svg
-          className="w-2.5 h-2.5 ml-2.5"
+          className="w-2.5 h-2.5 ml-2.5 dark:invert"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -92,14 +91,14 @@ export default function UserDropDown() {
 
       {/* DROPDOWN MENU */}
       <div className={hide}>
-        <div className="z-10 absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-          <div className="px-4 py-3 text-sm text-gray-900">
+        <div className="z-10 absolute mt-2 dark:bg-black bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+          <div className="px-4 py-3 text-sm text-red-500 dark:text-teal-500">
             <div className="font-medium ">
               {userData.data.user.name + " " + userData.data.user.lastName}
             </div>
             <div className="truncate">{userData.data.user.email}</div>
           </div>
-          <ul className="py-2 text-sm text-gray-700">
+          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li>
               <Link legacyBehavior href="./Account">
                 <a className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">

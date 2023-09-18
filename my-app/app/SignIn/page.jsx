@@ -57,7 +57,7 @@ export default function SignIn() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+    <main className="flex min-h-screen flex-col items-center justify-between p-12 dark:bg-neutral-900">
       <div className="flex gap-6 mx-auto my-10 w-full max-w-6xl">
         <div className=" w-1/2 flex  justify-end items-center rounded-r-md">
           <img
@@ -66,12 +66,12 @@ export default function SignIn() {
             alt="Cosmetics"
           />
         </div>
-        <div className="flex flex-col gap-12 w-full max-w-lg p-10 bg-white rounded shadow-lg">
+        <div className="flex flex-col gap-12 w-full max-w-lg p-10 dark:bg-black bg-white rounded shadow-lg">
           <div className="flex flex-col gap-6">
-            <div className="text-black text-4xl font-medium leading-loose tracking-wider">
+            <div className="text-black dark:text-white text-4xl font-medium leading-loose tracking-wider">
               Log in to Aphrodite
             </div>
-            <div className="text-black text-base font-normal leading-normal">
+            <div className="text-black dark:text-white text-base font-normal leading-normal">
               Enter your details below
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function SignIn() {
               ].map((field, idx) => (
                 <div className="flex flex-col gap-2" key={idx}>
                   <label
-                    className="opacity-40 text-black text-base font-normal leading-normal"
+                    className="opacity-40 text-black dark:text-white text-base font-normal leading-normal"
                     htmlFor={field.name}
                   >
                     {field.label}
@@ -92,7 +92,7 @@ export default function SignIn() {
                     id={field.name}
                     name={field.name}
                     type={field.type}
-                    className="w-full border-b border-black opacity-50 py-2"
+                    className="w-full border-b border-black dark:border-white dark:text-white dark:bg-black opacity-80 py-2"
                     onChange={handleChange}
                     required
                   />
@@ -102,13 +102,13 @@ export default function SignIn() {
             <div className="flex flex-col items-center gap-5 mt-8">
               <button
                 type="submit"
-                className="w-full px-32 py-4 bg-red-500 rounded text-white text-base font-medium"
+                className="w-full px-32 py-4 bg-red-500 dark:bg-teal-500 rounded text-white text-base font-medium"
               >
                 Log In
               </button>
               <a
                 href="#forget-password"
-                className="text-red-500 text-base font-normal leading-normal"
+                className="text-red-500 dark:text-teal-500 text-base font-normal leading-normal"
               >
                 Forget Password?
               </a>
