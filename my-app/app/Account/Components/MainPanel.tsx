@@ -140,48 +140,45 @@ export default function MainPanel() {
 
   return (
     <main>
-      <div className="w-[870px] h-[730px] relative bg-white rounded shadow">
-        <div className="left-[80px]  absolute text-red-500 text-xl font-medium leading-7">
+      <div className="w-[870px] h-[630px] relative bg-white rounded shadow">
+        <div className="left-[80px] top-[40px] relative text-red-500 text-xl font-medium leading-7">
           Edit Your Profile
         </div>
-
         <form onSubmit={(e) => handleSubmit(e)}>
-          <main>
-            <div className="left-[80px] top-[70px] absolute flex items-center justify-center w-40 h-40 rounded-full">
-              <label className="flex flex-col items-center justify-center w-40 h-45 rounded-full border-2 border-gray-300 border-dashed rounded-lg bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                <div className="flex flex-col items-center justify-center w-full h-full">
-                  <div className="flex flex-col items-center justify-center w-full h-full">
-                    <img
-                      src={userData?.data.user.photo}
-                      alt="photo de profile"
-                      className="w-full h-full mb-4 object-cover"
-                    />
-                    <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                      <span className="font-semibold">Click to upload</span> or
-                      drag and drop
-                    </p>
-                  </div>
-                </div>
-                <input
-                  id="dropzone-file"
-                  type="file"
-                  className="hidden"
-                  onChange={(e) => {
-                    const file = e.target?.files?.[0];
-                    if (file) {
-                      setSelectedFile(file);
-                    }
-                  }}
+          <div className="left-[80px] top-[80px] absolute flex items-center rounded-full justify-center">
+            <label className="w-[685px] flex flex-col items-center justify-center border border-gray-300 border-dashed rounded-lg bg-gray-50 dark:hover:bg-bray-800">
+              <div className="flex flex-col items-center justify-center w-full h-full">
+                <img
+                  src={userData?.data.user.photo}
+                  alt="Profile picture"
+                  className="mt-2 font-semibold object-cover  text-gray-500"
                 />
-              </label>
-            </div>
-          </main>
-          <div className="left-[80px] top-[274px] absolute justify-start items-start gap-12 inline-flex">
+                <p className="mb-2 text-sm text-gray-500">
+                  <span className="font-semibold">Click to upload</span> or drag
+                  and drop
+                </p>
+              </div>
+
+              <input
+                id="dropzone-file"
+                type="file"
+                className="hidden"
+                onChange={(e) => {
+                  const file = e.target?.files?.[0];
+                  if (file) {
+                    setSelectedFile(file);
+                  }
+                }}
+              />
+            </label>
+          </div>
+          <div className="left-[80px] top-[160px] absolute justify-start items-start gap-12 inline-flex">
             <div className="flex-col justify-start items-start gap-2 inline-flex">
               <p className="text-black text-base font-normal leading-normal">
                 First Name
               </p>
               <input
+                placeholder="John"
                 className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
@@ -192,18 +189,20 @@ export default function MainPanel() {
                 Last Name
               </p>
               <input
+                placeholder="Doe"
                 className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
             </div>
           </div>
-          <div className="left-[80px] top-[358px] absolute justify-start items-start gap-12 inline-flex">
+          <div className="left-[80px] top-[258px] absolute justify-start items-start gap-12 inline-flex">
             <div className="flex-col justify-start items-start gap-2 inline-flex">
               <p className="text-black text-base font-normal leading-normal">
                 Email
               </p>
               <input
+                placeholder="john.doe@cloud.com"
                 type="email"
                 className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
                 value={email}
@@ -215,14 +214,14 @@ export default function MainPanel() {
                 Address
               </p>
               <input
-              
+                placeholder="10 Apple seed Street"
                 className="pl-4 w-80 h-12 left-0 top-0 relative bg-neutral-100 rounded"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
               />
             </div>
           </div>
-          <div className="left-[80px] top-[446px] absolute flex-col justify-start items-start gap-4 inline-flex">
+          <div className="left-[80px] top-[366px] absolute flex-col justify-start items-start gap-4 inline-flex">
             <div className="flex-col justify-start items-start gap-2 flex">
               <p className="text-black text-base font-normal leading-normal">
                 Password Changes
@@ -263,7 +262,7 @@ export default function MainPanel() {
               {sucessMSG}
             </div>
           )}
-          <div className="left-[487px] top-[644px] absolute justify-start items-center gap-8 inline-flex">
+          <div className="left-[487px] top-[544px] absolute justify-start items-center gap-8 inline-flex">
             <Link
               href="/"
               className="text-black text-base font-normal leading-normal"
