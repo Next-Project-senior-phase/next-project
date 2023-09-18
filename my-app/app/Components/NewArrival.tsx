@@ -37,7 +37,7 @@ export default function NewArrival() {
             <div className=" mr-30 mt-[-250px] ml-[-50px]">
               <img
                 className=" ml-[15px] w-[210px] h-[305px]"
-                src="https://i00.eu/img/784/1024x1024/deo5sfwc/1888.jpg"
+                src="agement-media%2F42343%2F42343_3.png%3Fversion%3D1620376200&w=1440&bc=%23f5f5f5&ib=%23f5f5f5&h=1440&q=30"
               />
             </div>
             <div className=" mr-30 mt-[-250px] ml-[-50px]">
