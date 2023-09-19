@@ -1,7 +1,52 @@
+"use client"
+import React, { useState } from "react";
+import emailjs, { init } from "emailjs-com";
+init("Su9ZjZF4Jzqufvtsw");
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    number: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event:any) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+    try {
+      const response = await emailjs.sendForm(
+        "service_kgetrk7",
+        "template_foqjs9s",
+        e.currentTarget,
+        "ydwth3TQCXgCLTAFo"
+      );
+
+      console.log("EmailJS Response:", response);
+
+      if (response.status === 200) {
+        console.log("Email sent successfully!");
+      } else {
+        console.error("Email sending failed:", response.text);
+      }
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    }
+
+    setFormData({
+      name: "",
+      number: "",
+      email: "",
+      message: "",
+    });
+  };
   return (
     <main className="dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between pt-28  pl-5 pr-5">
-
+  {/* <form onSubmit={handleSubmit} ></form> */}
       <div className="inline-flex gap-5">
         {/* LEFT-PANEL */}
         <div className="w-80 h-[460px] pt-14 pl-8 bg-white dark:bg-black rounded shadow flex-col justify-start items-center inline-flex">
@@ -80,32 +125,60 @@ export default function Contact() {
         </div>
         {/* LEFT-PANEL */}
         {/* RIGHT-PANEL */}
+      
         <div className="w-[800px] h-[460px] px-8 py-10 dark:bg-black bg-white rounded shadow justify-center items-center inline-flex">
+         <form  onSubmit={handleSubmit}>
           <div className="self-stretch flex-col justify-start items-end gap-8 inline-flex">
+          {/* value={formData.name}
+                onChange={handleChange}
+                value={formData.email}
+                 onChange={handleChange}
+                 value={formData.number}
+                onChange={handleChange}
+                value={formData.message}
+               onChange={handleChange} */}
             <div className="justify-start items-start gap-4 inline-flex">
-              <input
-                placeholder="Your name *"
-                className="w-60 h-12 pl-4 left-0 top-0 relative dark:text-white dark:bg-neutral-700 bg-neutral-100 rounded"
-              />
+            <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name *"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-60 h-12 pl-4 left-0 top-0 relative bg-neutral-100 dark:text-white dark:bg-neutral-700 rounded"
+                />
+ <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email *"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-60 h-12 pl-4 left-0 top-0 relative bg-neutral-100 rounded dark:text-white dark:bg-neutral-700"
+                />
 
-              <input
-                placeholder="Your Email *"
-                className="w-60 h-12 pl-4 left-0 top-0 relative dark:text-white dark:bg-neutral-700 bg-neutral-100 rounded"
-              />
-
-              <input
-                placeholder="Your Phone *"
-                className="w-60 h-12 pl-4 left-0 top-0 relative dark:text-white dark:bg-neutral-700 bg-neutral-100 rounded"
-              />
+<input
+                  type="tel"
+                  name="number"
+                  placeholder="Your Phone *"
+                  value={formData.number}
+                  onChange={handleChange}
+                  className="w-60 h-12 pl-4 left-0 top-0 relative bg-neutral-100 rounded dark:text-white dark:bg-neutral-700"
+                />
             </div>
             <textarea
-              placeholder="Your Message *"
-              className="w-[750px] h-52 pl-4 pt-4 left-0 top-0 relative dark:text-white dark:bg-neutral-700 bg-neutral-100 rounded"
-            />
-            <button className="px-12 py-4 dark:bg-teal-500 bg-red-500 rounded justify-center items-center gap-2.5 inline-flex text-neutral-50 text-base font-medium leading-normal">
+                name="message"
+                placeholder="Your Message *"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-[750px] h-52 pl-4 pt-4 left-0 top-0 relative bg-neutral-100 rounded dark:text-white dark:bg-neutral-700"
+              />
+            <button
+            type="submit"
+            className="px-12 py-4 dark:bg-teal-500 bg-red-500 rounded justify-center items-center gap-2.5 inline-flex text-neutral-50 text-base font-medium leading-normal">
+          
               Send Massage
             </button>
           </div>
+          </form>
         </div>
         {/* RIGHT-PANEL */}
       </div>

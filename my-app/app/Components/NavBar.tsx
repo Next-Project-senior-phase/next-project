@@ -74,9 +74,9 @@ export default function NavBar() {
             </Link>
           </div>
           <UserDropDown />
-          <div className="opacity-0">
+          {/* <div className="opacity-0"> */}
           <ThemeSwitcher />
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </main>

@@ -27,13 +27,13 @@ export default function ProdDetailView(props: Props) {
   const { mainData, relatedData } = props;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pl-5 pr-5">
+    <main className="flex min-h-screen flex-col items-center justify-between py-20 w-screen dark:bg-neutral-900">
       <ProdDetailMain data={mainData} />
       {/* RELATED */}
       <div className="justify-start items-center gap-4 flex flex-col">
-        <div className="mt-10 inline-flex justify-center items-center gap-5">
-          <div className="w-5 h-10 bg-red-500 rounded" />
-          <p className="text-red-500 text-base font-semibold leading-tight">
+        <div className="mt-28 relative left-[-44%] inline-flex justify-center items-center gap-5">
+          <div className="w-5 h-10 dark:bg-teal-500 bg-red-500 rounded" />
+          <p className="text-red-500 dark:text-teal-500 text-base font-semibold leading-tight">
             Related Item
           </p>
         </div>

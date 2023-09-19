@@ -23,7 +23,7 @@ interface Props {
   data: Product;
 }
 
-export default function ProdDetailMain(props:Props) {
+export default function ProdDetailMain(props: Props) {
   const { data } = props;
   const [counter, setCounter] = useState(0);
   const [big, setBig] = useState(data.images[0].url);
@@ -52,7 +52,7 @@ export default function ProdDetailMain(props:Props) {
         <div className="w-28 h-96 flex flex-col gap-5">
           {data.images &&
             data.images.map((image) => {
-              console.log('the images',image);
+              console.log("the images", image);
               return (
                 <div>
                   <img
@@ -74,57 +74,57 @@ export default function ProdDetailMain(props:Props) {
         <div className="w-96 h-96 flex-col justify-center items-center">
           {/* NAME AVAILABILITY PRICE */}
           <div>
-            <p className="text-black text-2xl font-semibold leading-normal tracking-wide">
+            <p className="text-black dark:text-white text-2xl font-semibold leading-normal tracking-wide">
               {data && data.name}
             </p>
             {availability}
-            <p className="text-black text-2xl font-normal leading-normal tracking-wide pb-4">
+            <p className="text-black dark:text-white text-2xl font-normal leading-normal tracking-wide pb-4">
               ${data && data.price}
             </p>
 
-            <p className="w-96 text-black text-sm font-normal leading-tight pb-4">
+            <p className="w-96 text-black dark:text-white text-sm font-normal leading-tight pb-4">
               {data && data.description}
             </p>
           </div>
           {/* NAME AVAILABILITY PRICE */}
-          <div className="w-96 mt-4 mb-6 opacity-50 border-t border-black" />
+          <div className="w-96 mt-4 mb-6 opacity-50 border-t border-black dark:border-white" />
           {/* CAPACITY SELECTOR */}
           <div className="w-72 h-8 mb-6 justify-start items-center gap-4 inline-flex">
-            <p className="text-black text-xl font-normal leading-tight tracking-wide">
+            <p className="text-black dark:text-white text-xl font-normal leading-tight tracking-wide">
               Capacity:
             </p>
             <div className="justify-start items-start gap-2 flex">
               <div className="group">
-                <button className="w-12 h-8 px-1.5 py-1.5 rounded border border-black border-opacity-50 justify-center items-center flex group-hover:bg-red-500 group-hover:border-opacity-0">
-                  <p className="text-black text-sm font-medium leading-tight group-hover:text-neutral-50">
+                <button className="w-12 h-8 px-1.5 py-1.5 rounded border border-black dark:border-white border-opacity-50 justify-center items-center flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0">
+                  <p className="text-black dark:text-white text-sm font-medium leading-tight group-hover:text-neutral-50">
                     30ml
                   </p>
                 </button>
               </div>
               <div className="group">
-                <button className="w-12 h-8 py-1.5 rounded border border-black border-opacity-50 justify-center items-center flex group-hover:bg-red-500 group-hover:border-opacity-0">
-                  <p className="text-black text-sm font-medium leading-tight group-hover:text-neutral-50">
+                <button className="w-12 h-8 py-1.5 rounded border border-black dark:border-white border-opacity-50 justify-center items-center flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0">
+                  <p className="text-black dark:text-white text-sm font-medium leading-tight group-hover:text-neutral-50">
                     50ml
                   </p>
                 </button>
               </div>
               <div className="group">
-                <button className="group w-12 h-8 px-2.5 py-1.5 border border-black border-opacity-50 rounded justify-center items-center flex group-hover:bg-red-500 group-hover:border-opacity-0">
-                  <p className="text-black text-sm font-medium leading-tight group-hover:text-neutral-50">
+                <button className="group w-12 h-8 px-2.5 py-1.5 border border-black dark:border-white border-opacity-50 rounded justify-center items-center flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0">
+                  <p className="text-black dark:text-white text-sm font-medium leading-tight group-hover:text-neutral-50">
                     75ml
                   </p>
                 </button>
               </div>
               <div className="group">
-                <button className="w-12 h-8 py-1.5 rounded border border-black border-opacity-50 justify-center items-center flex group-hover:bg-red-500 group-hover:border-opacity-0">
-                  <p className="text-black text-sm font-medium leading-tight group-hover:text-neutral-50">
+                <button className="w-12 h-8 py-1.5 rounded border border-black dark:border-white border-opacity-50 justify-center items-center flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0">
+                  <p className="text-black dark:text-white text-sm font-medium leading-tight group-hover:text-neutral-50">
                     100ml
                   </p>
                 </button>
               </div>
               <div className="group">
-                <button className="w-12 h-8 px-2 py-1.5 rounded border border-black border-opacity-50 justify-center items-center flex group-hover:bg-red-500 group-hover:border-opacity-0">
-                  <p className="text-black text-sm font-medium leading-tight group-hover:text-neutral-50">
+                <button className="w-12 h-8 px-2 py-1.5 rounded border border-black dark:border-white border-opacity-50 justify-center items-center flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0">
+                  <p className="text-black dark:text-white text-sm font-medium leading-tight group-hover:text-neutral-50">
                     200ml
                   </p>
                 </button>
@@ -137,23 +137,31 @@ export default function ProdDetailMain(props:Props) {
             <div className="w-40 h-11 justify-start items-start inline-flex">
               <div className="group">
                 <button
-                  onClick={() => setCounter(counter - 1)}
-                  className="w-10 h-11 px-2 py-2.5 rounded-tl rounded-bl border border-black border-opacity-50 flex-col justify-center items-center inline-flex group-hover:bg-red-500 group-hover:border-opacity-0"
+                  onClick={() => {
+                    if (counter > 0) {
+                      setCounter(counter - 1);
+                    }
+                  }}
+                  className="w-10 h-11 px-2 py-2.5 rounded-tl rounded-bl border border-black dark:border-white border-opacity-50 flex-col justify-center items-center inline-flex group-hover:bg-red-500a dark:group-hover:bg-teal-500 group-hover:border-opacity-0"
                 >
-                  <p className="text-black group-hover:text-neutral-50">-</p>
+                  <p className="text-black dark:text-white group-hover:text-neutral-50">
+                    -
+                  </p>
                 </button>
               </div>
-              <div className="h-11 px-6 py-2 border-t border-b border-black border-opacity-50 justify-center items-center flex">
-                <div className="text-black text-xl font-medium leading-7">
+              <div className="h-11 px-6 py-2 border-t border-b border-black dark:border-white border-opacity-50 justify-center items-center flex">
+                <div className="text-black dark:text-white text-xl font-medium leading-7">
                   {counter}
                 </div>
               </div>
               <div className="group">
                 <button
                   onClick={() => setCounter(counter + 1)}
-                  className="w-10 h-11 px-2 py-2.5 border border-black border-opacity-50 rounded-tr rounded-br flex-col justify-center items-center inline-flex group-hover:bg-red-500 group-hover:border-opacity-0"
+                  className="w-10 h-11 px-2 py-2.5 border border-black dark:border-white border-opacity-50 rounded-tr rounded-br flex-col justify-center items-center inline-flex group-hover:bg-red-500 dark:group-hover:bg-teal-500 group-hover:border-opacity-0"
                 >
-                  <p className="text-black group-hover:text-neutral-50">+</p>
+                  <p className="text-black dark:text-white group-hover:text-neutral-50">
+                    +
+                  </p>
                 </button>
               </div>
             </div>
@@ -161,7 +169,7 @@ export default function ProdDetailMain(props:Props) {
 
             <Link
               href="./Cart"
-              className="w-40 h-11 bg-red-500 rounded justify-center items-center inline-flex hover:bg-red-300"
+              className="w-40 h-11 bg-red-500 dark:bg-teal-500 rounded justify-center items-center inline-flex"
             >
               <p className="text-neutral-50 text-base font-medium leading-normal">
                 Buy Now
@@ -170,11 +178,11 @@ export default function ProdDetailMain(props:Props) {
           </div>
           {/* ADD REMOVE */}
           {/* OPTIONS */}
-          <div className="w-96 h-44 justify-center items-center rounded border border-black border-opacity-50">
+          <div className="w-96 h-44 justify-center items-center rounded border border-black dark:border-white border-opacity-50">
             {/* FREE DELIVERY */}
             <div className="px-8 py-3 gap-4 inline-flex items-center">
               <svg
-                className="w-10 h-10 relative"
+                className="w-10 h-10 relative dark:invert"
                 width="40"
                 height="40"
                 viewBox="0 0 40 40"
@@ -239,20 +247,20 @@ export default function ProdDetailMain(props:Props) {
                 </defs>
               </svg>
               <div className="flex-col gap-2 inline-flex">
-                <p className="text-black text-base font-medium leading-normal">
+                <p className="text-black dark:text-white text-base font-medium leading-normal">
                   Free Delivery
                 </p>
-                <p className="text-black text-xs font-medium underline leading-none">
+                <p className="text-black dark:text-white text-xs font-medium underline leading-none">
                   For eligible areas
                 </p>
               </div>
             </div>
             {/* FREE DELIVERY */}
-            <div className="w-96 mt-4 mb-6 opacity-50 border-t border-black" />
+            <div className="w-96 mt-4 mb-6 opacity-50 border-t border-black dark:border-white" />
             {/* RETURN DELIVERY */}
             <div className="px-8  gap-4 inline-flex items-center">
               <svg
-                className="w-10 h-10 relative"
+                className="w-10 h-10 relative dark:invert"
                 width="40"
                 height="40"
                 viewBox="0 0 40 40"
@@ -281,13 +289,12 @@ export default function ProdDetailMain(props:Props) {
                   </clipPath>
                 </defs>
               </svg>
-
               <div className="flex-col justify-start items-start gap-2 inline-flex">
-                <div className="text-black text-base font-medium leading-normal">
+                <div className="text-black dark:text-white text-base font-medium leading-normal">
                   Return Delivery
                 </div>
                 <div>
-                  <p className="text-black text-xs font-medium leading-none">
+                  <p className="text-black dark:text-white text-xs font-medium leading-none">
                     Free 30 Days Delivery Returns.{" "}
                   </p>
                 </div>
