@@ -3,7 +3,7 @@ import { z } from "zod";
 export const RegisterUserSchema = z
   .object({
     name: z.string().min(1, "Name is required"),
-    lastName: z.string().optional().default(""), // Add lastName as optional and set a default value
+    lastName: z.string().optional().default(""), 
     email: z
       .string()
       .email("Invalid email address")
