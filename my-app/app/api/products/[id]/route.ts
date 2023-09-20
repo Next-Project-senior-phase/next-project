@@ -9,7 +9,7 @@ interface Params {
 }
 
 export async function DELETE(req: NextApiRequest, res: NextApiResponse) {
-  console.log('req.query:', req.query); // Log req.query to inspect it
+  console.log('req.query:', req.query); 
   
   try {
     if (!req.query || typeof req.query.id !== 'string') {
@@ -27,7 +27,7 @@ export async function DELETE(req: NextApiRequest, res: NextApiResponse) {
     });
 
     return res.json({ message: "Product deleted successfully" });
-  } catch (err: any) { // Use type assertion here to specify err is of type any
+  } catch (err: any) { 
     console.error('Error in DELETE route:', err);
 
     if (err.code === 'P2016') {
